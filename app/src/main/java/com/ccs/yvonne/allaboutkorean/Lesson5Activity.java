@@ -1,5 +1,9 @@
 package com.ccs.yvonne.allaboutkorean;
 
+/**
+ * Created by melvin.g.uy on 9/11/2017.
+ */
+
 import android.content.Intent;
 import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
@@ -26,8 +30,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class Lesson2Activity extends AppCompatActivity {
-
+public class Lesson5Activity extends AppCompatActivity{
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -62,14 +65,14 @@ public class Lesson2Activity extends AppCompatActivity {
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //        .setAction("Action", null).show();
-                startActivity(new Intent(Lesson2Activity.this, CategoriesActivity.class));
+                startActivity(new Intent(Lesson5Activity.this, CategoriesActivity.class));
                 finish();
             }
         });
 
     }
     public void onBackPressed() {
-        startActivity(new Intent(Lesson2Activity.this,CategoriesActivity.class));
+        startActivity(new Intent(Lesson5Activity.this,CategoriesActivity.class));
         finish();
     }
 
@@ -89,7 +92,7 @@ public class Lesson2Activity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
-            Toast.makeText(Lesson2Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Lesson5Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -134,37 +137,100 @@ public class Lesson2Activity extends AppCompatActivity {
             if(secNumber == 1)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("daehag");
-                engText.setText("university");
-                korImage.setImageResource(R.drawable.university);
+                korText.setText("teuleining bog");
+                engText.setText("sweatsuit");
+                korImage.setImageResource(R.drawable.sweatsuit);
             }
             else if(secNumber == 2)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("godeunghaggyo");
-                engText.setText("high school");
-                korImage.setImageResource(R.drawable.high_school);
+                korText.setText("deuleseu syeocheu");
+                engText.setText("dress shirt");
+                korImage.setImageResource(R.drawable.dressshirt);
             }
             else if(secNumber == 3)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("junghaggyo");
-                engText.setText("middle school");
-                korImage.setImageResource(R.drawable.middle_school);
+                korText.setText("jam-os");
+                engText.setText("pajamas");
+                korImage.setImageResource(R.drawable.pajamas);
             }
             else if(secNumber == 4)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("chodeunghaggyo");
-                engText.setText("elementary school");
-                korImage.setImageResource(R.drawable.elementary_school);
+                korText.setText("banbaji");
+                engText.setText("shorts");
+                korImage.setImageResource(R.drawable.shorts);
             }
             else if(secNumber == 5)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("yuchiwon");
-                engText.setText("kindergarten");
-                korImage.setImageResource(R.drawable.kindergarten);
+                korText.setText("chima");
+                engText.setText("skirt");
+                korImage.setImageResource(R.drawable.skirt);
+            }
+            else if(secNumber == 6)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("baji");
+                engText.setText("pants");
+                korImage.setImageResource(R.drawable.pants);
+            }
+            else if(secNumber == 7)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("deuleseu");
+                engText.setText("dress");
+                korImage.setImageResource(R.drawable.dress);
+            }
+            else if(secNumber == 8)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("cheongbaji");
+                engText.setText("jeans");
+                korImage.setImageResource(R.drawable.jeans);
+            }
+            else if(secNumber == 9)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("jaekis");
+                engText.setText("jacket");
+                korImage.setImageResource(R.drawable.jacket);
+            }
+            else if(secNumber == 10)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("jeongjang");
+                engText.setText("suit");
+                korImage.setImageResource(R.drawable.suit);
+            }
+            else if(secNumber == 11)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("syeocheu");
+                engText.setText("shirt");
+                korImage.setImageResource(R.drawable.shirt);
+            }
+            else if(secNumber == 12)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("koteu");
+                engText.setText("coat");
+                korImage.setImageResource(R.drawable.coat);
+            }
+            else if(secNumber == 13)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("tisyeocheu");
+                engText.setText("t-shirt");
+                korImage.setImageResource(R.drawable.tshirt);
+            }
+            else if(secNumber == 14)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("seuweteo");
+                engText.setText("sweater");
+                korImage.setImageResource(R.drawable.sweater);
             }
             return rootView;
         }
@@ -189,8 +255,8 @@ public class Lesson2Activity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 5 total pages.
-            return 5;
+            // Show 14 total pages.
+            return 14;
         }
 
         @Override
@@ -206,6 +272,24 @@ public class Lesson2Activity extends AppCompatActivity {
                     return "SECTION 4";
                 case 4:
                     return "SECTION 5";
+                case 5:
+                    return "SECTION 6";
+                case 6:
+                    return "SECTION 7";
+                case 7:
+                    return "SECTION 8";
+                case 8:
+                    return "SECTION 9";
+                case 9:
+                    return "SECTION 10";
+                case 10:
+                    return "SECTION 11";
+                case 11:
+                    return "SECTION 12";
+                case 12:
+                    return "SECTION 13";
+                case 13:
+                    return "SECTION 14";
             }
             return null;
         }

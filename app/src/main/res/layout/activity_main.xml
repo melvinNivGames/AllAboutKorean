@@ -52,7 +52,7 @@
         android:shadowColor="#2E2E2E"
         android:shadowDx="0"
         android:shadowDy="0"
-        android:shadowRadius="5"/>
+        android:shadowRadius="2"/>
 
     <Button
         android:id="@+id/gradesB"
@@ -71,7 +71,7 @@
         android:shadowColor="#2E2E2E"
         android:shadowDx="0"
         android:shadowDy="0"
-        android:shadowRadius="5"/>
+        android:shadowRadius="2"/>
 
     <Button
         android:id="@+id/categoriesB"
@@ -93,6 +93,6 @@
         android:shadowColor="#2E2E2E"
         android:shadowDx="0"
         android:shadowDy="0"
-        android:shadowRadius="5"/>
+        android:shadowRadius="2"/>
 
 </android.support.constraint.ConstraintLayout>

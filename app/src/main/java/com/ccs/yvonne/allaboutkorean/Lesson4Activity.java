@@ -1,5 +1,9 @@
 package com.ccs.yvonne.allaboutkorean;
 
+/**
+ * Created by melvin.g.uy on 9/11/2017.
+ */
+
 import android.content.Intent;
 import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
@@ -26,8 +30,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class Lesson2Activity extends AppCompatActivity {
-
+public class Lesson4Activity extends AppCompatActivity {
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -62,14 +65,14 @@ public class Lesson2Activity extends AppCompatActivity {
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //        .setAction("Action", null).show();
-                startActivity(new Intent(Lesson2Activity.this, CategoriesActivity.class));
+                startActivity(new Intent(Lesson4Activity.this, CategoriesActivity.class));
                 finish();
             }
         });
 
     }
     public void onBackPressed() {
-        startActivity(new Intent(Lesson2Activity.this,CategoriesActivity.class));
+        startActivity(new Intent(Lesson4Activity.this,CategoriesActivity.class));
         finish();
     }
 
@@ -89,7 +92,7 @@ public class Lesson2Activity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
-            Toast.makeText(Lesson2Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Lesson4Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -134,37 +137,107 @@ public class Lesson2Activity extends AppCompatActivity {
             if(secNumber == 1)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("daehag");
-                engText.setText("university");
-                korImage.setImageResource(R.drawable.university);
+                korText.setText("baegu");
+                engText.setText("volleyball");
+                korImage.setImageResource(R.drawable.volleyball);
             }
             else if(secNumber == 2)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("godeunghaggyo");
-                engText.setText("high school");
-                korImage.setImageResource(R.drawable.high_school);
+                korText.setText("teniseu");
+                engText.setText("tennis");
+                korImage.setImageResource(R.drawable.tennis);
             }
             else if(secNumber == 3)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("junghaggyo");
-                engText.setText("middle school");
-                korImage.setImageResource(R.drawable.middle_school);
+                korText.setText("taggu");
+                engText.setText("table tennis");
+                korImage.setImageResource(R.drawable.tabbletennis);
             }
             else if(secNumber == 4)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("chodeunghaggyo");
-                engText.setText("elementary school");
-                korImage.setImageResource(R.drawable.elementary_school);
+                korText.setText("suyeong");
+                engText.setText("swimming");
+                korImage.setImageResource(R.drawable.swimming);
             }
             else if(secNumber == 5)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("yuchiwon");
-                engText.setText("kindergarten");
-                korImage.setImageResource(R.drawable.kindergarten);
+                korText.setText("chuggu");
+                engText.setText("soccer");
+                korImage.setImageResource(R.drawable.soccer);
+            }
+            else if(secNumber == 6)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("seuki tagi");
+                engText.setText("skiing");
+                korImage.setImageResource(R.drawable.skiing);
+            }
+            else if(secNumber == 7)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("haki");
+                engText.setText("hockey");
+                korImage.setImageResource(R.drawable.hockey);
+            }
+            else if(secNumber == 8)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("golpeu");
+                engText.setText("golf");
+                korImage.setImageResource(R.drawable.golf);
+            }
+            else if(secNumber == 9)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("misig chuggu");
+                engText.setText("american football");
+                korImage.setImageResource(R.drawable.american_football);
+            }
+            else if(secNumber == 10)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("gwontu");
+                engText.setText("boxing");
+                korImage.setImageResource(R.drawable.boxing);
+            }
+            else if(secNumber == 11)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("bolling");
+                engText.setText("bowling");
+                korImage.setImageResource(R.drawable.bowling);
+            }
+            else if(secNumber == 12)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("nong-gu");
+                engText.setText("basketball");
+                korImage.setImageResource(R.drawable.basketball);
+            }
+            else if(secNumber == 13)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("yagu");
+                engText.setText("baseball");
+                korImage.setImageResource(R.drawable.baseball);
+            }
+            else if(secNumber == 14)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("baedeuminteon");
+                engText.setText("badminton");
+                korImage.setImageResource(R.drawable.badminton);
+            }
+            else if(secNumber == 15)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("yang-gung");
+                engText.setText("archery");
+                korImage.setImageResource(R.drawable.archery);
             }
             return rootView;
         }
@@ -189,8 +262,8 @@ public class Lesson2Activity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 5 total pages.
-            return 5;
+            // Show 15 total pages.
+            return 15;
         }
 
         @Override
@@ -206,6 +279,26 @@ public class Lesson2Activity extends AppCompatActivity {
                     return "SECTION 4";
                 case 4:
                     return "SECTION 5";
+                case 5:
+                    return "SECTION 6";
+                case 6:
+                    return "SECTION 7";
+                case 7:
+                    return "SECTION 8";
+                case 8:
+                    return "SECTION 9";
+                case 9:
+                    return "SECTION 10";
+                case 10:
+                    return "SECTION 11";
+                case 11:
+                    return "SECTION 12";
+                case 12:
+                    return "SECTION 13";
+                case 13:
+                    return "SECTION 14";
+                case 14:
+                    return "SECTION 15";
             }
             return null;
         }

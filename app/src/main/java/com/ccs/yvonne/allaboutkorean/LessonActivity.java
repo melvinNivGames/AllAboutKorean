@@ -60,8 +60,8 @@ public class LessonActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
                 startActivity(new Intent(LessonActivity.this, CategoriesActivity.class));
                 finish();
             }
@@ -88,7 +88,8 @@ public class LessonActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_help) {
+            Toast.makeText(LessonActivity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
