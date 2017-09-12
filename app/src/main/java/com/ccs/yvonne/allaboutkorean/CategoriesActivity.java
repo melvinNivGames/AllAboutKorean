@@ -19,7 +19,7 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 public class CategoriesActivity extends AppCompatActivity {
     // Array of strings...
     String[] mobileArray = {"Numbers","Education Stages","Fruits","Sports",
-            "Wears","Basic Phrases 1","Basic Phrases 2","Item 8","Item 9",
+            "Wears","Basic Phrases","Love Phrases","Item 8","Item 9",
             "Item 10","Item 11","Item 12","Item 13","Item 14","Item 15"};
 
     @Override
@@ -62,6 +62,16 @@ public class CategoriesActivity extends AppCompatActivity {
                 else if(intentLesson.equals("Wears"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson5Activity.class));
+                    finish();
+                }
+                else if(intentLesson.equals("Basic Phrases"))
+                {
+                    startActivity(new Intent(CategoriesActivity.this, Lesson6Activity.class));
+                    finish();
+                }
+                else if(intentLesson.equals("Love Phrases"))
+                {
+                    startActivity(new Intent(CategoriesActivity.this, Lesson7Activity.class));
                     finish();
                 }
                 else
