@@ -137,44 +137,51 @@ public class Lesson6Activity extends AppCompatActivity{
             if(secNumber == 1)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("eolmayeyo?");
-                engText.setText("how much is this?");
-                korImage.setImageResource(R.drawable.how_much_is_this);
+                korText.setText("wol-yoil");
+                engText.setText("monday");
+                korImage.setImageResource(R.drawable.monday);
             }
             else if(secNumber == 2)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("nae seongeullaseu eodi iss-eoyo?");
-                engText.setText("where are my sunglasses?");
-                korImage.setImageResource(R.drawable.where_are_my_sunglasses);
+                korText.setText("hwayoil");
+                engText.setText("tuesday");
+                korImage.setImageResource(R.drawable.tuesday);
             }
             else if(secNumber == 3)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("myeoch sijyo?");
-                engText.setText("what time is it?");
-                korImage.setImageResource(R.drawable.what_time_is_it);
+                korText.setText("suyoil");
+                engText.setText("wednesday");
+                korImage.setImageResource(R.drawable.wednesday);
             }
             else if(secNumber == 4)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("oneul myeochil-iya?");
-                engText.setText("what is the date today?");
-                korImage.setImageResource(R.drawable.what_is_the_date_today);
+                korText.setText("mog-yoil");
+                engText.setText("thursday");
+                korImage.setImageResource(R.drawable.thursday);
             }
             else if(secNumber == 5)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("i olbaleunji?");
-                engText.setText("is this correct?");
-                korImage.setImageResource(R.drawable.is_this_correct);
+                korText.setText("geum-yoil");
+                engText.setText("friday");
+                korImage.setImageResource(R.drawable.friday);
             }
             else if(secNumber == 6)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("jal jinaess-eoyo?");
-                engText.setText("how are you?");
-                korImage.setImageResource(R.drawable.how_are_you);
+                korText.setText("toyoil");
+                engText.setText("saturday");
+                korImage.setImageResource(R.drawable.saturday);
+            }
+            else if(secNumber == 7)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("il-yoil");
+                engText.setText("sunday");
+                korImage.setImageResource(R.drawable.sunday);
             }
             return rootView;
         }
@@ -199,8 +206,8 @@ public class Lesson6Activity extends AppCompatActivity{
 
         @Override
         public int getCount() {
-            // Show 14 total pages.
-            return 5;
+            // Show 7 total pages.
+            return 7;
         }
 
         @Override
@@ -216,6 +223,10 @@ public class Lesson6Activity extends AppCompatActivity{
                     return "SECTION 4";
                 case 4:
                     return "SECTION 5";
+                case 5:
+                    return "SECTION 6";
+                case 6:
+                    return "SECTION 7";
             }
             return null;
         }

@@ -1,9 +1,7 @@
 package com.ccs.yvonne.allaboutkorean;
 
-import android.support.v7.app.AppCompatActivity;
-
 /**
- * Created by melvin.g.uy on 9/12/2017.
+ * Created by melvin.g.uy on 9/15/2017.
  */
 
 import android.content.Intent;
@@ -32,7 +30,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class Lesson7Activity extends AppCompatActivity{
+public class Lesson8Activity extends AppCompatActivity{
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -67,14 +65,14 @@ public class Lesson7Activity extends AppCompatActivity{
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //        .setAction("Action", null).show();
-                startActivity(new Intent(Lesson7Activity.this, CategoriesActivity.class));
+                startActivity(new Intent(Lesson8Activity.this, CategoriesActivity.class));
                 finish();
             }
         });
 
     }
     public void onBackPressed() {
-        startActivity(new Intent(Lesson7Activity.this,CategoriesActivity.class));
+        startActivity(new Intent(Lesson8Activity.this,CategoriesActivity.class));
         finish();
     }
 
@@ -94,7 +92,7 @@ public class Lesson7Activity extends AppCompatActivity{
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
-            Toast.makeText(Lesson7Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Lesson8Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -139,44 +137,58 @@ public class Lesson7Activity extends AppCompatActivity{
             if(secNumber == 1)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("haji ma");
-                engText.setText("don't do it");
-                korImage.setImageResource(R.drawable.dont_do_it);
+                korText.setText("apeulika");
+                engText.setText("africa");
+                korImage.setImageResource(R.drawable.africa);
             }
             else if(secNumber == 2)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("ulji mala");
-                engText.setText("don't cry");
-                korImage.setImageResource(R.drawable.dont_cry);
+                korText.setText("namgeug daelyug");
+                engText.setText("antarctica");
+                korImage.setImageResource(R.drawable.antartica);
             }
             else if(secNumber == 3)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("meogji mala");
-                engText.setText("don't eat");
-                korImage.setImageResource(R.drawable.dont_eat);
+                korText.setText("asia");
+                engText.setText("asia");
+                korImage.setImageResource(R.drawable.asia);
             }
             else if(secNumber == 4)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("gajima");
-                engText.setText("don't go");
-                korImage.setImageResource(R.drawable.dont_go);
+                korText.setText("hoju");
+                engText.setText("australia");
+                korImage.setImageResource(R.drawable.australia);
             }
             else if(secNumber == 5)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("usji mala");
-                engText.setText("don't laugh");
-                korImage.setImageResource(R.drawable.dont_laugh);
+                korText.setText("yulasia");
+                engText.setText("eurasia");
+                korImage.setImageResource(R.drawable.eurasia);
             }
             else if(secNumber == 6)
             {
                 textView.setText(getString(R.string.section_format, secNumber));
-                korText.setText("boji mala");
-                engText.setText("don't look");
-                korImage.setImageResource(R.drawable.dont_look);
+                korText.setText("yuleob");
+                engText.setText("europe");
+                korImage.setImageResource(R.drawable.europe);
+            }
+            else if(secNumber == 7)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("nam-amelika");
+                engText.setText("south america");
+                korImage.setImageResource(R.drawable.south_america);
+            }
+            else if(secNumber == 8)
+            {
+                textView.setText(getString(R.string.section_format, secNumber));
+                korText.setText("bug-amelika");
+                engText.setText("north america");
+                korImage.setImageResource(R.drawable.north_america);
             }
             return rootView;
         }
@@ -201,8 +213,8 @@ public class Lesson7Activity extends AppCompatActivity{
 
         @Override
         public int getCount() {
-            // Show 6 total pages.
-            return 6;
+            // Show 8 total pages.
+            return 8;
         }
 
         @Override
@@ -220,6 +232,10 @@ public class Lesson7Activity extends AppCompatActivity{
                     return "SECTION 5";
                 case 5:
                     return "SECTION 6";
+                case 6:
+                    return "SECTION 7";
+                case 7:
+                    return "SECTION 8";
             }
             return null;
         }

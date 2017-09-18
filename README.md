@@ -1,4 +1,4 @@
 # AllAboutKorean
 All About Korean android app
 
-Current version: v.05
+Current version: v.06
