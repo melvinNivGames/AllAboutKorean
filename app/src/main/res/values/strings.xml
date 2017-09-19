@@ -8,6 +8,9 @@
     <string name="title_activity_lesson6">Lesson: Days</string>
     <string name="title_activity_lesson7">Lesson: Don\'ts in Korea</string>
     <string name="title_activity_lesson8">Lesson: Continents</string>
+    <string name="title_activity_lesson9">Lesson: Colors</string>
+    <string name="title_activity_lesson10">Lesson: Animals</string>
+    <string name="title_activity_lesson11">Lesson: Family Members</string>
     <string name="action_help">Help</string>
     <string name="section_format">Hello World from section: %1$d</string>
 </resources>
