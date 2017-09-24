@@ -14,13 +14,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
 public class CategoriesActivity extends AppCompatActivity {
-    // Array of strings...
+    // Lessons
     String[] mobileArray = {"Numbers","Education Stages","Fruits","Sports",
             "Wears","Days","Don'ts in Korea","Continents","Colors",
-            "Animals","Family Members","Item 12","Item 13","Item 14","Item 15"};
+            "Animals","Family Members","School Subjects","Body Parts","Months","Weathers"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,12 +92,27 @@ public class CategoriesActivity extends AppCompatActivity {
                     startActivity(new Intent(CategoriesActivity.this, Lesson11Activity.class));
                     finish();
                 }
-                else
+                else if(intentLesson.equals("School Subjects"))
                 {
-                    Toast.makeText(CategoriesActivity.this, "Soon", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(CategoriesActivity.this, Lesson12Activity.class));
+                    finish();
+                }
+                else if(intentLesson.equals("Body Parts"))
+                {
+                    startActivity(new Intent(CategoriesActivity.this, Lesson13Activity.class));
+                    finish();
+                }
+                else if(intentLesson.equals("Months"))
+                {
+                    startActivity(new Intent(CategoriesActivity.this, Lesson14Activity.class));
+                    finish();
+                }
+                else if(intentLesson.equals("Weathers"))
+                {
+                    startActivity(new Intent(CategoriesActivity.this, Lesson15Activity.class));
+                    finish();
                 }
             }
         });
     }
-
 }

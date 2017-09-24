@@ -5,14 +5,8 @@ package com.ccs.yvonne.allaboutkorean;
  */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,12 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson11Activity extends AppCompatActivity {
     /**
@@ -136,119 +127,102 @@ public class Lesson11Activity extends AppCompatActivity {
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("gajog");
                 engText.setText("family");
                 korImage.setImageResource(R.drawable.family);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("abeoji");
                 engText.setText("father");
                 korImage.setImageResource(R.drawable.father);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("eomeoni");
                 engText.setText("mother");
                 korImage.setImageResource(R.drawable.mother);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("hal-abeoji");
                 engText.setText("grandfather");
                 korImage.setImageResource(R.drawable.grandfather);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("halmeoni");
                 engText.setText("grandmother");
                 korImage.setImageResource(R.drawable.grandmother);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("sonja");
                 engText.setText("grandson");
                 korImage.setImageResource(R.drawable.grandson);
             }
             else if(secNumber == 7)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("sonnyeo");
                 engText.setText("granddaughter");
                 korImage.setImageResource(R.drawable.granddaugther);
             }
             else if(secNumber == 8)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("jobumo");
                 engText.setText("grandparents");
                 korImage.setImageResource(R.drawable.grandparents);
             }
             else if(secNumber == 9)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("sonja");
                 engText.setText("grandchildren");
                 korImage.setImageResource(R.drawable.grandchildren);
             }
             else if(secNumber == 10)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("adeul");
                 engText.setText("son");
                 korImage.setImageResource(R.drawable.son);
             }
             else if(secNumber == 11)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("ttal");
                 engText.setText("daughter");
                 korImage.setImageResource(R.drawable.daughter);
             }
             else if(secNumber == 12)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("donglyo");
                 engText.setText("brother");
                 korImage.setImageResource(R.drawable.brother);
             }
             else if(secNumber == 13)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yeoja hyeongje");
                 engText.setText("sister");
                 korImage.setImageResource(R.drawable.sister);
             }
             else if(secNumber == 14)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("samchon");
                 engText.setText("uncle");
                 korImage.setImageResource(R.drawable.uncle);
             }
             else if(secNumber == 15)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("imo");
                 engText.setText("aunt");
                 korImage.setImageResource(R.drawable.aunt);
             }
             else if(secNumber == 16)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("joka");
                 engText.setText("nephew");
                 korImage.setImageResource(R.drawable.nephew);
             }
             else if(secNumber == 17)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("jokattal");
                 engText.setText("niece");
                 korImage.setImageResource(R.drawable.niece);

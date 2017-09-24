@@ -1,17 +1,17 @@
 package com.ccs.yvonne.allaboutkorean;
 
 /**
- * Created by melvin.g.uy on 9/11/2017.
+ * Created by melvin.g.uy on 9/19/2017.
  */
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Lesson3Activity extends AppCompatActivity{
+public class Lesson15Activity extends AppCompatActivity {
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -56,14 +56,14 @@ public class Lesson3Activity extends AppCompatActivity{
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //        .setAction("Action", null).show();
-                startActivity(new Intent(Lesson3Activity.this, CategoriesActivity.class));
+                startActivity(new Intent(Lesson15Activity.this, CategoriesActivity.class));
                 finish();
             }
         });
 
     }
     public void onBackPressed() {
-        startActivity(new Intent(Lesson3Activity.this,CategoriesActivity.class));
+        startActivity(new Intent(Lesson15Activity.this,CategoriesActivity.class));
         finish();
     }
 
@@ -83,7 +83,7 @@ public class Lesson3Activity extends AppCompatActivity{
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
-            Toast.makeText(Lesson3Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Lesson15Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -127,117 +127,51 @@ public class Lesson3Activity extends AppCompatActivity{
 
             if(secNumber == 1)
             {
-                korText.setText("ttalgi");
-                engText.setText("strawberry");
-                korImage.setImageResource(R.drawable.strawberry);
+                korText.setText("bi");
+                engText.setText("rain");
+                korImage.setImageResource(R.drawable.rain);
             }
             else if(secNumber == 2)
             {
-                korText.setText("kiwi gwail");
-                engText.setText("kiwi fruit");
-                korImage.setImageResource(R.drawable.kiwifruit);
+                korText.setText("nun");
+                engText.setText("snow");
+                korImage.setImageResource(R.drawable.snow);
             }
             else if(secNumber == 3)
             {
-                korText.setText("pain-aepeul");
-                engText.setText("pineapple");
-                korImage.setImageResource(R.drawable.pineapple);
+                korText.setText("angae");
+                engText.setText("fog");
+                korImage.setImageResource(R.drawable.fog);
             }
             else if(secNumber == 4)
             {
-                korText.setText("subag");
-                engText.setText("watermelon");
-                korImage.setImageResource(R.drawable.watermelon);
+                korText.setText("heulin");
+                engText.setText("cloudt");
+                korImage.setImageResource(R.drawable.cloudy);
             }
             else if(secNumber == 5)
             {
-                korText.setText("lemon");
-                engText.setText("lemon");
-                korImage.setImageResource(R.drawable.lemon);
+                korText.setText("haesbich");
+                engText.setText("sunshine");
+                korImage.setImageResource(R.drawable.sunshine);
             }
             else if(secNumber == 6)
             {
-                korText.setText("jadu");
-                engText.setText("plum");
-                korImage.setImageResource(R.drawable.plum);
+                korText.setText("chuwi");
+                engText.setText("cold");
+                korImage.setImageResource(R.drawable.cold);
             }
             else if(secNumber == 7)
             {
-                korText.setText("bogsung-a");
-                engText.setText("peach");
-                korImage.setImageResource(R.drawable.peach);
+                korText.setText("ttatteushan");
+                engText.setText("warm");
+                korImage.setImageResource(R.drawable.warm);
             }
             else if(secNumber == 8)
             {
-                korText.setText("abokado");
-                engText.setText("avocado");
-                korImage.setImageResource(R.drawable.avocado);
-            }
-            else if(secNumber == 9)
-            {
-                korText.setText("mellon");
-                engText.setText("melon");
-                korImage.setImageResource(R.drawable.melon);
-            }
-            else if(secNumber == 10)
-            {
-                korText.setText("muhwagwa");
-                engText.setText("fig");
-                korImage.setImageResource(R.drawable.fig);
-            }
-            else if(secNumber == 11)
-            {
-                korText.setText("juhwangsaeg");
-                engText.setText("orange");
-                korImage.setImageResource(R.drawable.orange);
-            }
-            else if(secNumber == 12)
-            {
-                korText.setText("gyul");
-                engText.setText("tangerine");
-                korImage.setImageResource(R.drawable.tangerine);
-            }
-            else if(secNumber == 13)
-            {
-                korText.setText("beojji");
-                engText.setText("cherries");
-                korImage.setImageResource(R.drawable.cherries);
-            }
-            else if(secNumber == 14)
-            {
-                korText.setText("kokoneos");
-                engText.setText("coconut");
-                korImage.setImageResource(R.drawable.coconut);
-            }
-            else if(secNumber == 15)
-            {
-                korText.setText("banana");
-                engText.setText("banana");
-                korImage.setImageResource(R.drawable.banana);
-            }
-            else if(secNumber == 16)
-            {
-                korText.setText("bae");
-                engText.setText("pear");
-                korImage.setImageResource(R.drawable.pear);
-            }
-            else if(secNumber == 17)
-            {
-                korText.setText("yeolmae");
-                engText.setText("berries");
-                korImage.setImageResource(R.drawable.berries);
-            }
-            else if(secNumber == 18)
-            {
-                korText.setText("sagwa");
-                engText.setText("apple");
-                korImage.setImageResource(R.drawable.apple);
-            }
-            else if(secNumber == 19)
-            {
-                korText.setText("mang-go");
-                engText.setText("mango");
-                korImage.setImageResource(R.drawable.mango);
+                korText.setText("balam-i sen");
+                engText.setText("windy");
+                korImage.setImageResource(R.drawable.windy);
             }
             return rootView;
         }
@@ -262,8 +196,8 @@ public class Lesson3Activity extends AppCompatActivity{
 
         @Override
         public int getCount() {
-            // Show 20 total pages.
-            return 20;
+            // Show 8 total pages.
+            return 8;
         }
 
         @Override
@@ -285,30 +219,6 @@ public class Lesson3Activity extends AppCompatActivity{
                     return "SECTION 7";
                 case 7:
                     return "SECTION 8";
-                case 8:
-                    return "SECTION 9";
-                case 9:
-                    return "SECTION 10";
-                case 10:
-                    return "SECTION 11";
-                case 11:
-                    return "SECTION 12";
-                case 12:
-                    return "SECTION 13";
-                case 13:
-                    return "SECTION 14";
-                case 14:
-                    return "SECTION 15";
-                case 15:
-                    return "SECTION 16";
-                case 16:
-                    return "SECTION 17";
-                case 17:
-                    return "SECTION 18";
-                case 18:
-                    return "SECTION 19";
-                case 19:
-                    return "SECTION 20";
             }
             return null;
         }

@@ -7,14 +7,7 @@ import android.support.v7.app.AppCompatActivity;
  */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -25,12 +18,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson7Activity extends AppCompatActivity{
     /**
@@ -138,42 +128,36 @@ public class Lesson7Activity extends AppCompatActivity{
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("haji ma");
                 engText.setText("don't do it");
                 korImage.setImageResource(R.drawable.dont_do_it);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("ulji mala");
                 engText.setText("don't cry");
                 korImage.setImageResource(R.drawable.dont_cry);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("meogji mala");
                 engText.setText("don't eat");
                 korImage.setImageResource(R.drawable.dont_eat);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("gajima");
                 engText.setText("don't go");
                 korImage.setImageResource(R.drawable.dont_go);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("usji mala");
                 engText.setText("don't laugh");
                 korImage.setImageResource(R.drawable.dont_laugh);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("boji mala");
                 engText.setText("don't look");
                 korImage.setImageResource(R.drawable.dont_look);

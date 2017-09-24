@@ -5,14 +5,8 @@ package com.ccs.yvonne.allaboutkorean;
  */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,12 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson5Activity extends AppCompatActivity{
     /**
@@ -136,98 +127,84 @@ public class Lesson5Activity extends AppCompatActivity{
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("teuleining bog");
                 engText.setText("sweatsuit");
                 korImage.setImageResource(R.drawable.sweatsuit);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("deuleseu syeocheu");
                 engText.setText("dress shirt");
                 korImage.setImageResource(R.drawable.dressshirt);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("jam-os");
                 engText.setText("pajamas");
                 korImage.setImageResource(R.drawable.pajamas);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("banbaji");
                 engText.setText("shorts");
                 korImage.setImageResource(R.drawable.shorts);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("chima");
                 engText.setText("skirt");
                 korImage.setImageResource(R.drawable.skirt);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("baji");
                 engText.setText("pants");
                 korImage.setImageResource(R.drawable.pants);
             }
             else if(secNumber == 7)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("deuleseu");
                 engText.setText("dress");
                 korImage.setImageResource(R.drawable.dress);
             }
             else if(secNumber == 8)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("cheongbaji");
                 engText.setText("jeans");
                 korImage.setImageResource(R.drawable.jeans);
             }
             else if(secNumber == 9)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("jaekis");
                 engText.setText("jacket");
                 korImage.setImageResource(R.drawable.jacket);
             }
             else if(secNumber == 10)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("jeongjang");
                 engText.setText("suit");
                 korImage.setImageResource(R.drawable.suit);
             }
             else if(secNumber == 11)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("syeocheu");
                 engText.setText("shirt");
                 korImage.setImageResource(R.drawable.shirt);
             }
             else if(secNumber == 12)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("koteu");
                 engText.setText("coat");
                 korImage.setImageResource(R.drawable.coat);
             }
             else if(secNumber == 13)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("tisyeocheu");
                 engText.setText("t-shirt");
                 korImage.setImageResource(R.drawable.tshirt);
             }
             else if(secNumber == 14)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("seuweteo");
                 engText.setText("sweater");
                 korImage.setImageResource(R.drawable.sweater);

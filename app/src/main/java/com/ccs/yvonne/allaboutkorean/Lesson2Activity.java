@@ -1,14 +1,8 @@
 package com.ccs.yvonne.allaboutkorean;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,12 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson2Activity extends AppCompatActivity {
 
@@ -133,35 +124,30 @@ public class Lesson2Activity extends AppCompatActivity {
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("daehag");
                 engText.setText("university");
                 korImage.setImageResource(R.drawable.university);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("godeunghaggyo");
                 engText.setText("high school");
                 korImage.setImageResource(R.drawable.high_school);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("junghaggyo");
                 engText.setText("middle school");
                 korImage.setImageResource(R.drawable.middle_school);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("chodeunghaggyo");
                 engText.setText("elementary school");
                 korImage.setImageResource(R.drawable.elementary_school);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yuchiwon");
                 engText.setText("kindergarten");
                 korImage.setImageResource(R.drawable.kindergarten);

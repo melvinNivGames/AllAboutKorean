@@ -5,14 +5,8 @@ package com.ccs.yvonne.allaboutkorean;
  */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,12 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson4Activity extends AppCompatActivity {
     /**
@@ -136,105 +127,90 @@ public class Lesson4Activity extends AppCompatActivity {
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("baegu");
                 engText.setText("volleyball");
                 korImage.setImageResource(R.drawable.volleyball);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("teniseu");
                 engText.setText("tennis");
                 korImage.setImageResource(R.drawable.tennis);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("taggu");
                 engText.setText("table tennis");
                 korImage.setImageResource(R.drawable.tabbletennis);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("suyeong");
                 engText.setText("swimming");
                 korImage.setImageResource(R.drawable.swimming);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("chuggu");
                 engText.setText("soccer");
                 korImage.setImageResource(R.drawable.soccer);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("seuki tagi");
                 engText.setText("skiing");
                 korImage.setImageResource(R.drawable.skiing);
             }
             else if(secNumber == 7)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("haki");
                 engText.setText("hockey");
                 korImage.setImageResource(R.drawable.hockey);
             }
             else if(secNumber == 8)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("golpeu");
                 engText.setText("golf");
                 korImage.setImageResource(R.drawable.golf);
             }
             else if(secNumber == 9)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("misig chuggu");
                 engText.setText("american football");
                 korImage.setImageResource(R.drawable.american_football);
             }
             else if(secNumber == 10)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("gwontu");
                 engText.setText("boxing");
                 korImage.setImageResource(R.drawable.boxing);
             }
             else if(secNumber == 11)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("bolling");
                 engText.setText("bowling");
                 korImage.setImageResource(R.drawable.bowling);
             }
             else if(secNumber == 12)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("nong-gu");
                 engText.setText("basketball");
                 korImage.setImageResource(R.drawable.basketball);
             }
             else if(secNumber == 13)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yagu");
                 engText.setText("baseball");
                 korImage.setImageResource(R.drawable.baseball);
             }
             else if(secNumber == 14)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("baedeuminteon");
                 engText.setText("badminton");
                 korImage.setImageResource(R.drawable.badminton);
             }
             else if(secNumber == 15)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yang-gung");
                 engText.setText("archery");
                 korImage.setImageResource(R.drawable.archery);

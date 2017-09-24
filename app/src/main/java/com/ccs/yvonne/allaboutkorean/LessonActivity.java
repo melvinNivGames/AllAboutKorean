@@ -1,14 +1,8 @@
 package com.ccs.yvonne.allaboutkorean;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,12 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class LessonActivity extends AppCompatActivity {
 
@@ -133,70 +124,60 @@ public class LessonActivity extends AppCompatActivity {
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("hana");
                 engText.setText("one");
                 korImage.setImageResource(R.drawable.one);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("du");
                 engText.setText("two");
                 korImage.setImageResource(R.drawable.two);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("se");
                 engText.setText("three");
                 korImage.setImageResource(R.drawable.three);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("sa");
                 engText.setText("four");
                 korImage.setImageResource(R.drawable.four);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("daseos");
                 engText.setText("five");
                 korImage.setImageResource(R.drawable.five);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yug");
                 engText.setText("six");
                 korImage.setImageResource(R.drawable.six);
             }
             else if(secNumber == 7)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("ilgob");
                 engText.setText("seven");
                 korImage.setImageResource(R.drawable.seven);
             }
             else if(secNumber == 8)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yeodeolb");
                 engText.setText("eight");
                 korImage.setImageResource(R.drawable.eight);
             }
             else if(secNumber == 9)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("ahob");
                 engText.setText("nine");
                 korImage.setImageResource(R.drawable.nine);
             }
             else if(secNumber == 10)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("jelo");
                 engText.setText("zero");
                 korImage.setImageResource(R.drawable.zero);

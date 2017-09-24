@@ -5,14 +5,8 @@ package com.ccs.yvonne.allaboutkorean;
  */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,12 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson6Activity extends AppCompatActivity{
     /**
@@ -136,49 +127,42 @@ public class Lesson6Activity extends AppCompatActivity{
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("wol-yoil");
                 engText.setText("monday");
                 korImage.setImageResource(R.drawable.monday);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("hwayoil");
                 engText.setText("tuesday");
                 korImage.setImageResource(R.drawable.tuesday);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("suyoil");
                 engText.setText("wednesday");
                 korImage.setImageResource(R.drawable.wednesday);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("mog-yoil");
                 engText.setText("thursday");
                 korImage.setImageResource(R.drawable.thursday);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("geum-yoil");
                 engText.setText("friday");
                 korImage.setImageResource(R.drawable.friday);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("toyoil");
                 engText.setText("saturday");
                 korImage.setImageResource(R.drawable.saturday);
             }
             else if(secNumber == 7)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("il-yoil");
                 engText.setText("sunday");
                 korImage.setImageResource(R.drawable.sunday);

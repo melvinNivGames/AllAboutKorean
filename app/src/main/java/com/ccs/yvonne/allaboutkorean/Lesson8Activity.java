@@ -5,14 +5,8 @@ package com.ccs.yvonne.allaboutkorean;
  */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,12 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson8Activity extends AppCompatActivity{
     /**
@@ -136,56 +127,48 @@ public class Lesson8Activity extends AppCompatActivity{
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("apeulika");
                 engText.setText("africa");
                 korImage.setImageResource(R.drawable.africa);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("namgeug daelyug");
                 engText.setText("antarctica");
                 korImage.setImageResource(R.drawable.antartica);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("asia");
                 engText.setText("asia");
                 korImage.setImageResource(R.drawable.asia);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("hoju");
                 engText.setText("australia");
                 korImage.setImageResource(R.drawable.australia);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yulasia");
                 engText.setText("eurasia");
                 korImage.setImageResource(R.drawable.eurasia);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yuleob");
                 engText.setText("europe");
                 korImage.setImageResource(R.drawable.europe);
             }
             else if(secNumber == 7)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("nam-amelika");
                 engText.setText("south america");
                 korImage.setImageResource(R.drawable.south_america);
             }
             else if(secNumber == 8)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("bug-amelika");
                 engText.setText("north america");
                 korImage.setImageResource(R.drawable.north_america);

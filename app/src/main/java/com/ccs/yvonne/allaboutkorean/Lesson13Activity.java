@@ -1,17 +1,17 @@
 package com.ccs.yvonne.allaboutkorean;
 
 /**
- * Created by melvin.g.uy on 9/11/2017.
+ * Created by melvin.g.uy on 9/19/2017.
  */
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Lesson3Activity extends AppCompatActivity{
+public class Lesson13Activity extends AppCompatActivity {
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -56,14 +56,14 @@ public class Lesson3Activity extends AppCompatActivity{
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //        .setAction("Action", null).show();
-                startActivity(new Intent(Lesson3Activity.this, CategoriesActivity.class));
+                startActivity(new Intent(Lesson13Activity.this, CategoriesActivity.class));
                 finish();
             }
         });
 
     }
     public void onBackPressed() {
-        startActivity(new Intent(Lesson3Activity.this,CategoriesActivity.class));
+        startActivity(new Intent(Lesson13Activity.this,CategoriesActivity.class));
         finish();
     }
 
@@ -83,7 +83,7 @@ public class Lesson3Activity extends AppCompatActivity{
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
-            Toast.makeText(Lesson3Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Lesson13Activity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -127,117 +127,69 @@ public class Lesson3Activity extends AppCompatActivity{
 
             if(secNumber == 1)
             {
-                korText.setText("ttalgi");
-                engText.setText("strawberry");
-                korImage.setImageResource(R.drawable.strawberry);
+                korText.setText("meoli");
+                engText.setText("head");
+                korImage.setImageResource(R.drawable.body_head);
             }
             else if(secNumber == 2)
             {
-                korText.setText("kiwi gwail");
-                engText.setText("kiwi fruit");
-                korImage.setImageResource(R.drawable.kiwifruit);
+                korText.setText("simjang");
+                engText.setText("heart");
+                korImage.setImageResource(R.drawable.body_heart);
             }
             else if(secNumber == 3)
             {
-                korText.setText("pain-aepeul");
-                engText.setText("pineapple");
-                korImage.setImageResource(R.drawable.pineapple);
+                korText.setText("noe");
+                engText.setText("brain");
+                korImage.setImageResource(R.drawable.body_brain);
             }
             else if(secNumber == 4)
             {
-                korText.setText("subag");
-                engText.setText("watermelon");
-                korImage.setImageResource(R.drawable.watermelon);
+                korText.setText("pye");
+                engText.setText("lungs");
+                korImage.setImageResource(R.drawable.body_lungs);
             }
             else if(secNumber == 5)
             {
-                korText.setText("lemon");
-                engText.setText("lemon");
-                korImage.setImageResource(R.drawable.lemon);
+                korText.setText("soyu");
+                engText.setText("hands");
+                korImage.setImageResource(R.drawable.body_hands);
             }
             else if(secNumber == 6)
             {
-                korText.setText("jadu");
-                engText.setText("plum");
-                korImage.setImageResource(R.drawable.plum);
+                korText.setText("dali");
+                engText.setText("legs");
+                korImage.setImageResource(R.drawable.body_legs);
             }
             else if(secNumber == 7)
             {
-                korText.setText("bogsung-a");
-                engText.setText("peach");
-                korImage.setImageResource(R.drawable.peach);
+                korText.setText("mugi");
+                engText.setText("arms");
+                korImage.setImageResource(R.drawable.body_arms);
             }
             else if(secNumber == 8)
             {
-                korText.setText("abokado");
-                engText.setText("avocado");
-                korImage.setImageResource(R.drawable.avocado);
+                korText.setText("gaseum");
+                engText.setText("chest");
+                korImage.setImageResource(R.drawable.body_chest);
             }
             else if(secNumber == 9)
             {
-                korText.setText("mellon");
-                engText.setText("melon");
-                korImage.setImageResource(R.drawable.melon);
+                korText.setText("songalag");
+                engText.setText("fingers");
+                korImage.setImageResource(R.drawable.body_fingers);
             }
             else if(secNumber == 10)
             {
-                korText.setText("muhwagwa");
-                engText.setText("fig");
-                korImage.setImageResource(R.drawable.fig);
+                korText.setText("balgalag");
+                engText.setText("toes");
+                korImage.setImageResource(R.drawable.body_toes);
             }
             else if(secNumber == 11)
             {
-                korText.setText("juhwangsaeg");
-                engText.setText("orange");
-                korImage.setImageResource(R.drawable.orange);
-            }
-            else if(secNumber == 12)
-            {
-                korText.setText("gyul");
-                engText.setText("tangerine");
-                korImage.setImageResource(R.drawable.tangerine);
-            }
-            else if(secNumber == 13)
-            {
-                korText.setText("beojji");
-                engText.setText("cherries");
-                korImage.setImageResource(R.drawable.cherries);
-            }
-            else if(secNumber == 14)
-            {
-                korText.setText("kokoneos");
-                engText.setText("coconut");
-                korImage.setImageResource(R.drawable.coconut);
-            }
-            else if(secNumber == 15)
-            {
-                korText.setText("banana");
-                engText.setText("banana");
-                korImage.setImageResource(R.drawable.banana);
-            }
-            else if(secNumber == 16)
-            {
-                korText.setText("bae");
-                engText.setText("pear");
-                korImage.setImageResource(R.drawable.pear);
-            }
-            else if(secNumber == 17)
-            {
-                korText.setText("yeolmae");
-                engText.setText("berries");
-                korImage.setImageResource(R.drawable.berries);
-            }
-            else if(secNumber == 18)
-            {
-                korText.setText("sagwa");
-                engText.setText("apple");
-                korImage.setImageResource(R.drawable.apple);
-            }
-            else if(secNumber == 19)
-            {
-                korText.setText("mang-go");
-                engText.setText("mango");
-                korImage.setImageResource(R.drawable.mango);
+                korText.setText("nun");
+                engText.setText("eyes");
+                korImage.setImageResource(R.drawable.body_eyes);
             }
             return rootView;
         }
@@ -262,8 +214,8 @@ public class Lesson3Activity extends AppCompatActivity{
 
         @Override
         public int getCount() {
-            // Show 20 total pages.
-            return 20;
+            // Show 11 total pages.
+            return 11;
         }
 
         @Override
@@ -291,24 +243,6 @@ public class Lesson3Activity extends AppCompatActivity{
                     return "SECTION 10";
                 case 10:
                     return "SECTION 11";
-                case 11:
-                    return "SECTION 12";
-                case 12:
-                    return "SECTION 13";
-                case 13:
-                    return "SECTION 14";
-                case 14:
-                    return "SECTION 15";
-                case 15:
-                    return "SECTION 16";
-                case 16:
-                    return "SECTION 17";
-                case 17:
-                    return "SECTION 18";
-                case 18:
-                    return "SECTION 19";
-                case 19:
-                    return "SECTION 20";
             }
             return null;
         }

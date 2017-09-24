@@ -5,14 +5,8 @@ package com.ccs.yvonne.allaboutkorean;
  */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,12 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson10Activity extends AppCompatActivity{
     /**
@@ -136,84 +127,72 @@ public class Lesson10Activity extends AppCompatActivity{
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("wonsung-i");
                 engText.setText("monkey");
                 korImage.setImageResource(R.drawable.monkey);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("peng-gwin");
                 engText.setText("penguin");
                 korImage.setImageResource(R.drawable.penguin);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("gae");
                 engText.setText("dog");
                 korImage.setImageResource(R.drawable.dog);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("saja");
                 engText.setText("lion");
                 korImage.setImageResource(R.drawable.lion);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("holang-i");
                 engText.setText("tiger");
                 korImage.setImageResource(R.drawable.tiger);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("gom");
                 engText.setText("bear");
                 korImage.setImageResource(R.drawable.bear);
             }
             else if(secNumber == 7)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("jwi");
                 engText.setText("rat");
                 korImage.setImageResource(R.drawable.rat);
             }
             else if(secNumber == 8)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("yang");
                 engText.setText("sheep");
                 korImage.setImageResource(R.drawable.sheep);
             }
             else if(secNumber == 9)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("paendeo");
                 engText.setText("panda");
                 korImage.setImageResource(R.drawable.panda);
             }
             else if(secNumber == 10)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("dwaeji");
                 engText.setText("pig");
                 korImage.setImageResource(R.drawable.pig);
             }
             else if(secNumber == 11)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("mal");
                 engText.setText("horse");
                 korImage.setImageResource(R.drawable.horse);
             }
             else if(secNumber == 12)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("goyang-i");
                 engText.setText("cat");
                 korImage.setImageResource(R.drawable.cat);

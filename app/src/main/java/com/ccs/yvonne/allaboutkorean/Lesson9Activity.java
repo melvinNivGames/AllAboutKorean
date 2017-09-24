@@ -5,14 +5,8 @@ package com.ccs.yvonne.allaboutkorean;
  */
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,12 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Lesson9Activity extends AppCompatActivity{
     /**
@@ -136,70 +127,60 @@ public class Lesson9Activity extends AppCompatActivity{
 
             if(secNumber == 1)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("geom-eun");
                 engText.setText("black");
                 korImage.setImageResource(R.drawable.black);
             }
             else if(secNumber == 2)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("hwaiteu");
                 engText.setText("white");
                 korImage.setImageResource(R.drawable.white);
             }
             else if(secNumber == 3)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("juhwangsaeg");
                 engText.setText("orange");
                 korImage.setImageResource(R.drawable.orangec);
             }
             else if(secNumber == 4)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("puleun");
                 engText.setText("blue");
                 korImage.setImageResource(R.drawable.blue);
             }
             else if(secNumber == 5)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("galsaeg");
                 engText.setText("brown");
                 korImage.setImageResource(R.drawable.brown);
             }
             else if(secNumber == 6)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("nogsaeg");
                 engText.setText("green");
                 korImage.setImageResource(R.drawable.green);
             }
             else if(secNumber == 7)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("ja");
                 engText.setText("purple");
                 korImage.setImageResource(R.drawable.purple);
             }
             else if(secNumber == 8)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("jebikkoch");
                 engText.setText("violet");
                 korImage.setImageResource(R.drawable.violet);
             }
             else if(secNumber == 9)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("ppalgan");
                 engText.setText("red");
                 korImage.setImageResource(R.drawable.red);
             }
             else if(secNumber == 10)
             {
-                textView.setText(getString(R.string.section_format, secNumber));
                 korText.setText("hoesaeg");
                 engText.setText("gray");
                 korImage.setImageResource(R.drawable.gray);

@@ -11,6 +11,10 @@
     <string name="title_activity_lesson9">Lesson: Colors</string>
     <string name="title_activity_lesson10">Lesson: Animals</string>
     <string name="title_activity_lesson11">Lesson: Family Members</string>
+    <string name="title_activity_lesson12">Lesson: School Subjects</string>
+    <string name="title_activity_lesson13">Lesson: Body Parts</string>
+    <string name="title_activity_lesson14">Lesson: Months</string>
+    <string name="title_activity_lesson15">Lesson: Weathers</string>
     <string name="action_help">Help</string>
     <string name="section_format">Hello World from section: %1$d</string>
 </resources>
