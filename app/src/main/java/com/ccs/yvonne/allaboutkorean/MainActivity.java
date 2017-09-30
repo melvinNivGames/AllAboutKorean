@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button categoriesB, gradesB, exitB;
+    Button categoriesB, examB, exitB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         categoriesB = (Button)findViewById(R.id.categoriesB);
-        gradesB = (Button)findViewById(R.id.gradesB);
+        examB = (Button)findViewById(R.id.examB);
         exitB = (Button)findViewById(R.id.exitB);
 
         categoriesB.setOnClickListener(new View.OnClickListener(){
@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        gradesB.setOnClickListener(new View.OnClickListener(){
+        examB.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(MainActivity.this, "Soon", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,CategoriesQuizActivity.class));
             }
         });
 

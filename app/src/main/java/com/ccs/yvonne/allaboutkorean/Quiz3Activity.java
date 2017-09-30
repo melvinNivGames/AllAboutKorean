@@ -1,23 +1,24 @@
 package com.ccs.yvonne.allaboutkorean;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LessonActivity extends AppCompatActivity {
+public class Quiz3Activity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -37,7 +38,8 @@ public class LessonActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson);
+        setContentView(R.layout.activity_quiz1);
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -51,24 +53,29 @@ public class LessonActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //        .setAction("Action", null).show();
-                startActivity(new Intent(LessonActivity.this, CategoriesActivity.class));
+                startActivity(new Intent(Quiz3Activity.this, CategoriesQuizActivity.class));
                 finish();
             }
         });
 
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Quiz3Activity.this, "SAVE! No function.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void onBackPressed() {
-            startActivity(new Intent(LessonActivity.this,CategoriesActivity.class));
-            finish();
+        startActivity(new Intent(Quiz3Activity.this,CategoriesQuizActivity.class));
+        finish();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_lesson, menu);
+        getMenuInflater().inflate(R.menu.menu_quiz1, menu);
         return true;
     }
 
@@ -81,7 +88,8 @@ public class LessonActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
-            Toast.makeText(LessonActivity.this, "Swipe left or right.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Quiz3Activity.this, "        Swipe left or right.\nClick save button to submit.",
+                    Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -116,72 +124,43 @@ public class LessonActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_lesson, container, false);
-            TextView korText = (TextView) rootView.findViewById(R.id.koreaContent);
-            TextView engText = (TextView) rootView.findViewById(R.id.engContent);
-            ImageView korImage = (ImageView) rootView.findViewById(R.id.koreaImage);
+            View rootView = inflater.inflate(R.layout.fragment_quiz1, container, false);
+            TextView korTextQuiz = (TextView) rootView.findViewById(R.id.koreaContentQuiz);
+            TextView engTextQuiz = (TextView) rootView.findViewById(R.id.engContentQuiz);
+            Button btnChoice1 = (Button) rootView.findViewById(R.id.choice1);
+            Button btnChoice2 = (Button) rootView.findViewById(R.id.choice2);
+            Button btnChoice3 = (Button) rootView.findViewById(R.id.choice3);
+            ImageView korImageQuiz = (ImageView) rootView.findViewById(R.id.koreaImageQuiz);
             int secNumber = getArguments().getInt(ARG_SECTION_NUMBER);
 
             if(secNumber == 1)
             {
-                korText.setText("hana");
-                engText.setText("one");
-                korImage.setImageResource(R.drawable.one);
+                korTextQuiz.setText("Test-o");
+                engTextQuiz.setText("-----");
+                korImageQuiz.setImageResource(R.drawable.one);
+                btnChoice1.setText("TestA1");
+                btnChoice2.setText("TestA2");
+                btnChoice3.setText("TestA3");
             }
-            else if(secNumber == 2)
+            if(secNumber == 2)
             {
-                korText.setText("du");
-                engText.setText("two");
-                korImage.setImageResource(R.drawable.two);
+                korTextQuiz.setText("-----");
+                engTextQuiz.setText("test");
+                korImageQuiz.setImageResource(R.drawable.two);
+                btnChoice1.setText("TestB1");
+                btnChoice2.setText("TestB2");
+                btnChoice3.setText("TestB3");
             }
-            else if(secNumber == 3)
+            if(secNumber == 3)
             {
-                korText.setText("se");
-                engText.setText("three");
-                korImage.setImageResource(R.drawable.three);
+                korTextQuiz.setText("Test-o");
+                engTextQuiz.setText("-----");
+                korImageQuiz.setImageResource(R.drawable.three);
+                btnChoice1.setText("TestC1");
+                btnChoice2.setText("TestC2");
+                btnChoice3.setText("TestC3");
             }
-            else if(secNumber == 4)
-            {
-                korText.setText("sa");
-                engText.setText("four");
-                korImage.setImageResource(R.drawable.four);
-            }
-            else if(secNumber == 5)
-            {
-                korText.setText("daseos");
-                engText.setText("five");
-                korImage.setImageResource(R.drawable.five);
-            }
-            else if(secNumber == 6)
-            {
-                korText.setText("yug");
-                engText.setText("six");
-                korImage.setImageResource(R.drawable.six);
-            }
-            else if(secNumber == 7)
-            {
-                korText.setText("ilgob");
-                engText.setText("seven");
-                korImage.setImageResource(R.drawable.seven);
-            }
-            else if(secNumber == 8)
-            {
-                korText.setText("yeodeolb");
-                engText.setText("eight");
-                korImage.setImageResource(R.drawable.eight);
-            }
-            else if(secNumber == 9)
-            {
-                korText.setText("ahob");
-                engText.setText("nine");
-                korImage.setImageResource(R.drawable.nine);
-            }
-            else if(secNumber == 10)
-            {
-                korText.setText("jelo");
-                engText.setText("zero");
-                korImage.setImageResource(R.drawable.zero);
-            }
+
             return rootView;
         }
     }
@@ -205,8 +184,8 @@ public class LessonActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 10 total pages.
-            return 10;
+            // Show 3 total pages.
+            return 3;
         }
 
         @Override
@@ -218,20 +197,6 @@ public class LessonActivity extends AppCompatActivity {
                     return "SECTION 2";
                 case 2:
                     return "SECTION 3";
-                case 3:
-                    return "SECTION 4";
-                case 4:
-                    return "SECTION 5";
-                case 5:
-                    return "SECTION 6";
-                case 6:
-                    return "SECTION 7";
-                case 7:
-                    return "SECTION 8";
-                case 8:
-                    return "SECTION 9";
-                case 9:
-                    return "SECTION 0";
             }
             return null;
         }
