@@ -146,7 +146,7 @@ public class Lesson15Activity extends AppCompatActivity {
             else if(secNumber == 4)
             {
                 korText.setText("heulin");
-                engText.setText("cloudt");
+                engText.setText("cloud");
                 korImage.setImageResource(R.drawable.cloudy);
             }
             else if(secNumber == 5)

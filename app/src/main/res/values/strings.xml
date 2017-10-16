@@ -18,7 +18,7 @@
     <string name="action_help">Help</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_quiz1">Quiz: Easy</string>
-    <string name="title_activity_quiz2">Quiz: Normal</string>
+    <string name="title_activity_quiz2">Quiz: Medium</string>
     <string name="title_activity_quiz3">Quiz: Hard</string>
     <string name="action_settings">Settings</string>
 </resources>

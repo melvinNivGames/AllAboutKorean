@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class CategoriesQuizActivity extends AppCompatActivity {
     // Lessons
-    String[] mobileArray = {"Easy","Normal","Hard"};
+    String[] mobileArray = {"Easy","Medium","Hard"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class CategoriesQuizActivity extends AppCompatActivity {
                     startActivity(new Intent(CategoriesQuizActivity.this, Quiz1Activity.class));
                     finish();
                 }
-                else if(intentLesson.equals("Normal"))
+                else if(intentLesson.equals("Medium"))
                 {
                     startActivity(new Intent(CategoriesQuizActivity.this, Quiz2Activity.class));
                     finish();
