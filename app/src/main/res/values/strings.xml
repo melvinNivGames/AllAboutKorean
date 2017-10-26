@@ -20,5 +20,6 @@
     <string name="title_activity_quiz1">Quiz: Easy</string>
     <string name="title_activity_quiz2">Quiz: Medium</string>
     <string name="title_activity_quiz3">Quiz: Hard</string>
+    <string name="title_activity_grades">Grades</string>
     <string name="action_settings">Settings</string>
 </resources>

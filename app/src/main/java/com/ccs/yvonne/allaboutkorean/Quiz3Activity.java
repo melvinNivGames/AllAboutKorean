@@ -19,10 +19,17 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Quiz3Activity extends AppCompatActivity {
     int score = 0;
     static int answer[];
+    static final int READ_BLOCK_SIZE = 100;
+    int easy = 0, medium = 0, hard = 0;
+    static FloatingActionButton fab2;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -63,7 +70,7 @@ public class Quiz3Activity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,10 +78,51 @@ public class Quiz3Activity extends AppCompatActivity {
                 {
                     score += num;
                 }
-                Toast.makeText(Quiz3Activity.this, "Score: " + score + " out of 25", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Quiz3Activity.this, "Score: " + score + " out of 25", Toast.LENGTH_LONG).show();
+
+                try {
+                    FileInputStream fileIn=openFileInput("grades.aak");
+                    InputStreamReader InputRead= new InputStreamReader(fileIn);
+
+                    char[] inputBuffer= new char[READ_BLOCK_SIZE];
+                    String s="";
+                    int charRead;
+
+                    while ((charRead=InputRead.read(inputBuffer))>0) {
+                        // char to string conversion
+                        String readstring=String.copyValueOf(inputBuffer,0,charRead);
+                        s +=readstring;
+                    }
+
+                    InputRead.close();
+                    easy = Integer.parseInt(s.split(",")[0]);
+                    medium = Integer.parseInt(s.split(",")[1]);
+                    hard = Integer.parseInt(s.split(",")[2]);
+                }
+                catch (Exception e)
+                {
+                }
+
+                if(score > hard)
+                {
+                    hard = score;
+                }
+
+                try {
+                    FileOutputStream fileout = openFileOutput("grades.aak", MODE_PRIVATE);
+                    OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
+                    outputWriter.write(easy + "," + medium + "," + hard);
+                    outputWriter.close();
+                } catch (Exception e) {
+                }
+
                 score = 0;
+
+                onBackPressed();
             }
         });
+
+        fab2.setVisibility(View.GONE);
     }
 
     public void onBackPressed() {
@@ -208,6 +256,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("아보카도");
                 btnChoice2.setText("파인애플");//ETO
                 btnChoice3.setText("레몬");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 2)
             {
@@ -216,6 +265,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("말");//ETO
                 btnChoice2.setText("돼지");
                 btnChoice3.setText("고양이");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 3)
             {
@@ -224,6 +274,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("목요일");//ETO
                 btnChoice2.setText("월요일");
                 btnChoice3.setText("토요일");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 4)
             {
@@ -232,6 +283,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("파인애플");
                 btnChoice2.setText("딸기");
                 btnChoice3.setText("수박");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 5)
             {
@@ -240,6 +292,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("고양이");
                 btnChoice2.setText("팬더");//ETO
                 btnChoice3.setText("쥐");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 6)
             {
@@ -248,6 +301,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("목요일");
                 btnChoice2.setText("일요일");
                 btnChoice3.setText("월요일");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 7)
             {
@@ -256,6 +310,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("말");
                 btnChoice2.setText("개");
                 btnChoice3.setText("양");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 8)
             {
@@ -264,6 +319,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("수요일");
                 btnChoice2.setText("토요일");//ETO
                 btnChoice3.setText("금요일");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 9)
             {
@@ -272,6 +328,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("딸기");
                 btnChoice2.setText("파인애플");
                 btnChoice3.setText("멜론");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 10)
             {
@@ -280,6 +337,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("사자");
                 btnChoice2.setText("호랑이");
                 btnChoice3.setText("곰");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 11)
             {
@@ -288,6 +346,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("주황색");//ETO
                 btnChoice2.setText("버찌");
                 btnChoice3.setText("무화과");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 12)
             {
@@ -296,6 +355,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("호랑이");//ETO
                 btnChoice2.setText("개");
                 btnChoice3.setText("돼지");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 13)
             {
@@ -304,6 +364,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("토요일");
                 btnChoice2.setText("수요일");//ETO
                 btnChoice3.setText("목요일");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 14)
             {
@@ -312,6 +373,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("바나나");
                 btnChoice2.setText("사과");
                 btnChoice3.setText("코코넛");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 15)
             {
@@ -320,6 +382,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("고양이");//ETO
                 btnChoice2.setText("개");
                 btnChoice3.setText("돼지");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 16)
             {
@@ -328,6 +391,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("목요일");
                 btnChoice2.setText("일요일");
                 btnChoice3.setText("금요일");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 17)
             {
@@ -336,6 +400,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("양");
                 btnChoice2.setText("말");
                 btnChoice3.setText("펭귄");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 18)
             {
@@ -344,6 +409,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("화요일");//ETO
                 btnChoice2.setText("토요일");
                 btnChoice3.setText("금요일");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 19)
             {
@@ -352,6 +418,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("파인애플");
                 btnChoice2.setText("딸기");
                 btnChoice3.setText("바나나");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 20)
             {
@@ -360,6 +427,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("돼지");//ETO
                 btnChoice2.setText("곰");
                 btnChoice3.setText("호랑이");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 21)
             {
@@ -368,6 +436,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("값");//ETO
                 btnChoice2.setText("수학");
                 btnChoice3.setText("영어");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 22)
             {
@@ -376,6 +445,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("공학");//ETO
                 btnChoice2.setText("역사");
                 btnChoice3.setText("값");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 23)
             {
@@ -384,6 +454,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("공학");
                 btnChoice2.setText("역사");//ETO
                 btnChoice3.setText("값");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 24)
             {
@@ -392,6 +463,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("공학");
                 btnChoice2.setText("역사");
                 btnChoice3.setText("지리학");//ETO
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 25)
             {
@@ -400,6 +472,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 btnChoice1.setText("지리학");
                 btnChoice2.setText("공학");
                 btnChoice3.setText("과학");//ETO
+                fab2.setVisibility(View.VISIBLE);
             }
 
             return rootView;

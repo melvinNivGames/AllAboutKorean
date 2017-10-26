@@ -20,9 +20,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
 public class Quiz1Activity extends AppCompatActivity {
     int score = 0;
     static int answer[];
+    static final int READ_BLOCK_SIZE = 100;
+    int easy = 0, medium = 0, hard = 0;
+    static FloatingActionButton fab2;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -62,7 +70,7 @@ public class Quiz1Activity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,10 +78,51 @@ public class Quiz1Activity extends AppCompatActivity {
                 {
                     score += num;
                 }
-                Toast.makeText(Quiz1Activity.this, "Score: " + score + " out of 25", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Quiz1Activity.this, "Score: " + score + " out of 25", Toast.LENGTH_LONG).show();
+
+                try {
+                    FileInputStream fileIn=openFileInput("grades.aak");
+                    InputStreamReader InputRead= new InputStreamReader(fileIn);
+
+                    char[] inputBuffer= new char[READ_BLOCK_SIZE];
+                    String s="";
+                    int charRead;
+
+                    while ((charRead=InputRead.read(inputBuffer))>0) {
+                        // char to string conversion
+                        String readstring=String.copyValueOf(inputBuffer,0,charRead);
+                        s +=readstring;
+                    }
+
+                    InputRead.close();
+                    easy = Integer.parseInt(s.split(",")[0]);
+                    medium = Integer.parseInt(s.split(",")[1]);
+                    hard = Integer.parseInt(s.split(",")[2]);
+                }
+                catch (Exception e)
+                {
+                }
+
+                if(score > easy)
+                {
+                    easy = score;
+                }
+
+                try {
+                    FileOutputStream fileout = openFileOutput("grades.aak", MODE_PRIVATE);
+                    OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
+                    outputWriter.write(easy + "," + medium + "," + hard);
+                    outputWriter.close();
+                } catch (Exception e) {
+                }
+
                 score = 0;
+
+                onBackPressed();
             }
         });
+
+        fab2.setVisibility(View.GONE);
     }
 
     public void onBackPressed() {
@@ -206,6 +255,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("seven");
                 btnChoice2.setText("four");
                 btnChoice3.setText("one");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 2)
             {
@@ -215,6 +265,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("three");
                 btnChoice2.setText("seven");
                 btnChoice3.setText("two");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 3)
             {
@@ -224,6 +275,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("six");
                 btnChoice2.setText("three");
                 btnChoice3.setText("five");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 4)
             {
@@ -233,6 +285,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("four");
                 btnChoice2.setText("two");
                 btnChoice3.setText("nine");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 5)
             {
@@ -242,6 +295,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("six");
                 btnChoice2.setText("nine");
                 btnChoice3.setText("one");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 6)
             {
@@ -251,6 +305,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("three");
                 btnChoice2.setText("five");
                 btnChoice3.setText("eight");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 7)
             {
@@ -260,6 +315,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("one");
                 btnChoice2.setText("nine");
                 btnChoice3.setText("seven");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 8)
             {
@@ -269,6 +325,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("five");
                 btnChoice2.setText("four");
                 btnChoice3.setText("two");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 9)
             {
@@ -278,6 +335,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("eight");
                 btnChoice2.setText("three");
                 btnChoice3.setText("six");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 10)
             {
@@ -287,6 +345,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("february");
                 btnChoice2.setText("november");
                 btnChoice3.setText("august");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 11)
             {
@@ -296,6 +355,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("august");
                 btnChoice2.setText("january");
                 btnChoice3.setText("may");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 12)
             {
@@ -305,6 +365,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("march");
                 btnChoice2.setText("january");
                 btnChoice3.setText("september");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 13)
             {
@@ -314,6 +375,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("october");
                 btnChoice2.setText("may");
                 btnChoice3.setText("july");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 14)
             {
@@ -323,6 +385,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("december");
                 btnChoice2.setText("september");
                 btnChoice3.setText("april");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 15)
             {
@@ -332,6 +395,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("june");
                 btnChoice2.setText("february");
                 btnChoice3.setText("november");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 16)
             {
@@ -341,6 +405,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("october");
                 btnChoice2.setText("june");
                 btnChoice3.setText("march");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 17)
             {
@@ -350,6 +415,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("july");
                 btnChoice2.setText("march");
                 btnChoice3.setText("december");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 18)
             {
@@ -359,6 +425,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("august");
                 btnChoice2.setText("january");
                 btnChoice3.setText("july");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 19)
             {
@@ -368,6 +435,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("september");
                 btnChoice2.setText("april");
                 btnChoice3.setText("june");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 20)
             {
@@ -377,6 +445,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("august");
                 btnChoice2.setText("march");
                 btnChoice3.setText("december");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 21)
             {
@@ -386,6 +455,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("february");
                 btnChoice2.setText("october");
                 btnChoice3.setText("april");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 22)
             {
@@ -395,6 +465,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("january");
                 btnChoice2.setText("june");
                 btnChoice3.setText("september");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 23)
             {
@@ -404,6 +475,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("eurasia");
                 btnChoice2.setText("australia");
                 btnChoice3.setText("africa");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 24)
             {
@@ -413,6 +485,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("north america");
                 btnChoice2.setText("asia");
                 btnChoice3.setText("south america");
+                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 25)
             {
@@ -422,6 +495,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("antartica");
                 btnChoice2.setText("eurasia");
                 btnChoice3.setText("europe");
+                fab2.setVisibility(View.VISIBLE);
             }
 
             return rootView;
