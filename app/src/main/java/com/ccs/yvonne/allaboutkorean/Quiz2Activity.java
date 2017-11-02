@@ -19,7 +19,6 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
@@ -186,7 +185,7 @@ public class Quiz2Activity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_quiz1, container, false);
             TextView engTextQuiz = (TextView) rootView.findViewById(R.id.engContentQuiz);
             GradientDrawable gd = new GradientDrawable();
-            gd.setColor(0xFFFFFFFF); // Changes this drawbale to use a single color instead of a gradient
+            gd.setColor(0xFFFFFFFF);
             gd.setCornerRadius(5);
             gd.setStroke(5, 0xFF000000);
             TextView korTextQuiz = (TextView) rootView.findViewById(R.id.koreaContentQuiz);

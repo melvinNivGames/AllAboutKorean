@@ -40,78 +40,64 @@ public class CategoriesActivity extends AppCompatActivity {
 
                 if(intentLesson.equals("Numbers")) {
                     startActivity(new Intent(CategoriesActivity.this, LessonActivity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Education Stages"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson2Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Fruits"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson3Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Sports"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson4Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Wears"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson5Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Days"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson6Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Don'ts in Korea"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson7Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Continents"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson8Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Colors"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson9Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Animals"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson10Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Family Members"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson11Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("School Subjects"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson12Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Body Parts"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson13Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Months"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson14Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Weathers"))
                 {
                     startActivity(new Intent(CategoriesActivity.this, Lesson15Activity.class));
-                    finish();
                 }
+                finish();
             }
         });
     }

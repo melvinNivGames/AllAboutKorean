@@ -188,7 +188,7 @@ public class Quiz3Activity extends AppCompatActivity {
             TextView engTextQuiz = (TextView) rootView.findViewById(R.id.engContentQuiz);
 
             GradientDrawable gd = new GradientDrawable();
-            gd.setColor(0xFFFFFFFF); // Changes this drawbale to use a single color instead of a gradient
+            gd.setColor(0xFFFFFFFF);
             gd.setCornerRadius(5);
             gd.setStroke(5, 0xFF000000);
             ImageView korImageQuiz = (ImageView) rootView.findViewById(R.id.koreaImageQuiz);

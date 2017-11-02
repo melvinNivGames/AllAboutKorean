@@ -38,22 +38,19 @@ public class CategoriesQuizActivity extends AppCompatActivity {
 
                 if(intentLesson.equals("Easy")) {
                     startActivity(new Intent(CategoriesQuizActivity.this, Quiz1Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Medium"))
                 {
                     startActivity(new Intent(CategoriesQuizActivity.this, Quiz2Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Hard")) {
                     startActivity(new Intent(CategoriesQuizActivity.this, Quiz3Activity.class));
-                    finish();
                 }
                 else if(intentLesson.equals("Grades"))
                 {
                     startActivity(new Intent(CategoriesQuizActivity.this, GradesActivity.class));
-                    finish();
                 }
+                finish();
             }
         });
     }

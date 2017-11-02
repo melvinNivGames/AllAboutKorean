@@ -19,7 +19,6 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
@@ -89,7 +88,6 @@ public class Quiz1Activity extends AppCompatActivity {
                     int charRead;
 
                     while ((charRead=InputRead.read(inputBuffer))>0) {
-                        // char to string conversion
                         String readstring=String.copyValueOf(inputBuffer,0,charRead);
                         s +=readstring;
                     }
@@ -186,7 +184,7 @@ public class Quiz1Activity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_quiz1, container, false);
             TextView korTextQuiz = (TextView) rootView.findViewById(R.id.koreaContentQuiz);
             GradientDrawable gd = new GradientDrawable();
-            gd.setColor(0xFFFFFFFF); // Changes this drawbale to use a single color instead of a gradient
+            gd.setColor(0xFFFFFFFF);
             gd.setCornerRadius(5);
             gd.setStroke(5, 0xFF000000);
             TextView engTextQuiz = (TextView) rootView.findViewById(R.id.engContentQuiz);
@@ -255,7 +253,7 @@ public class Quiz1Activity extends AppCompatActivity {
                 btnChoice1.setText("seven");
                 btnChoice2.setText("four");
                 btnChoice3.setText("one");
-                fab2.setVisibility(View.GONE);
+
             }
             else if(secNumber == 2)
             {

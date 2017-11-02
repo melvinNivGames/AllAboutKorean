@@ -7,13 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.ValueDependentColor;
 import com.jjoe64.graphview.helper.StaticLabelsFormatter;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
-
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
@@ -37,7 +35,6 @@ public class GradesActivity extends AppCompatActivity {
             int charRead;
 
             while ((charRead=InputRead.read(inputBuffer))>0) {
-                // char to string conversion
                 String readstring=String.copyValueOf(inputBuffer,0,charRead);
                 s +=readstring;
             }
@@ -73,7 +70,6 @@ public class GradesActivity extends AppCompatActivity {
         staticLabelsFormatter.setHorizontalLabels(new String[] {"\t", "Easy", "Medium", "Hard", "\t"});
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
 
-        // styling
         series.setValueDependentColor(new ValueDependentColor<DataPoint>() {
             @Override
             public int get(DataPoint data) {
@@ -82,11 +78,8 @@ public class GradesActivity extends AppCompatActivity {
         });
 
         series.setSpacing(30);
-
-        // draw values on top
         series.setDrawValuesOnTop(false);
         series.setValuesOnTopColor(Color.RED);
-        //series.setValuesOnTopSize(50);
 
         summary.setText("EASY - " + easy + " pts.\nMEDIUM - " + medium + " pts\nHARD - " + hard + " pts");
 
@@ -94,8 +87,6 @@ public class GradesActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //        .setAction("Action", null).show();
                 startActivity(new Intent(GradesActivity.this, CategoriesQuizActivity.class));
                 finish();
             }
