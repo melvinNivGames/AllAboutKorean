@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
 
 public class GradesActivity extends AppCompatActivity {
     static final int READ_BLOCK_SIZE = 100;
-    int easy = 0, medium = 0, hard = 0;
+    int easy = 0, medium = 0, hard = 0, easyWrong = 0, mediumWrong = 0, hardWrong = 0;
     TextView summary;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +41,11 @@ public class GradesActivity extends AppCompatActivity {
 
             InputRead.close();
             easy = Integer.parseInt(s.split(",")[0]);
+            easyWrong = 25 - easy;
             medium = Integer.parseInt(s.split(",")[1]);
+            mediumWrong = 25 - medium;
             hard = Integer.parseInt(s.split(",")[2]);
+            hardWrong = 25 - hard;
         }
         catch (Exception e)
         {
@@ -81,16 +84,18 @@ public class GradesActivity extends AppCompatActivity {
         series.setDrawValuesOnTop(false);
         series.setValuesOnTopColor(Color.RED);
 
-        summary.setText("EASY - " + easy + " pts.\nMEDIUM - " + medium + " pts\nHARD - " + hard + " pts");
+        summary.setText("EASY - " + easy + " points : " + easyWrong + " mistakes" +
+                "\nMEDIUM - " + medium + " points : " + mediumWrong + " mistakes" +
+                "\nHARD - " + hard + " points : " + hardWrong + " mistakes");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(GradesActivity.this, CategoriesQuizActivity.class));
-                finish();
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(GradesActivity.this, CategoriesQuizActivity.class));
+//                finish();
+//            }
+//        });
     }
 
     public void onBackPressed() {

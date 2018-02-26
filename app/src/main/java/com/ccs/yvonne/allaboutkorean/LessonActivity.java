@@ -47,17 +47,6 @@ public class LessonActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //        .setAction("Action", null).show();
-                startActivity(new Intent(LessonActivity.this, CategoriesActivity.class));
-                finish();
-            }
-        });
-
     }
 
     public void onBackPressed() {

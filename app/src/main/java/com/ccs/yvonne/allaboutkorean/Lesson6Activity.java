@@ -1,11 +1,7 @@
 package com.ccs.yvonne.allaboutkorean;
 
-/**
- * Created by melvin.g.uy on 9/12/2017.
- */
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -48,18 +44,6 @@ public class Lesson6Activity extends AppCompatActivity{
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //        .setAction("Action", null).show();
-                startActivity(new Intent(Lesson6Activity.this, CategoriesActivity.class));
-                finish();
-            }
-        });
 
     }
     public void onBackPressed() {

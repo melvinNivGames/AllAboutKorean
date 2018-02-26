@@ -59,16 +59,6 @@ public class Quiz2Activity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Quiz2Activity.this, CategoriesQuizActivity.class));
-                answer = new int[0];
-                finish();
-            }
-        });
-
         fab2 = (FloatingActionButton) findViewById(R.id.fab2);
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,7 +111,7 @@ public class Quiz2Activity extends AppCompatActivity {
             }
         });
 
-        fab2.setVisibility(View.GONE);
+        fab2.setVisibility(View.VISIBLE);
     }
 
     public void onBackPressed() {
@@ -254,7 +244,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("heulin");//ETO
                 btnChoice2.setText("ttatteushan");
                 btnChoice3.setText("chuwi");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 2)
             {
@@ -264,7 +253,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("junghaggyo");
                 btnChoice2.setText("yuchiwon");
                 btnChoice3.setText("daehag");//ETO
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 3)
             {
@@ -274,7 +262,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("juhwangsaeg");//ETO
                 btnChoice2.setText("galsaeg");
                 btnChoice3.setText("hwaiteu");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 4)
             {
@@ -284,7 +271,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("nun");//ETO
                 btnChoice2.setText("angae");
                 btnChoice3.setText("balam-i sen");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 5)
             {
@@ -294,7 +280,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("ja");
                 btnChoice2.setText("hwaiteu");
                 btnChoice3.setText("nogsaeg");//ETO
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 6)
             {
@@ -304,7 +289,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("hoesaeg");
                 btnChoice2.setText("geom-eun");//ETO
                 btnChoice3.setText("ja");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 7)
             {
@@ -314,7 +298,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("godeunghaggyo");
                 btnChoice2.setText("yuchiwon");
                 btnChoice3.setText("chodeunghaggyo");//ETO
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 8)
             {
@@ -324,7 +307,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("ppalgan");//ETO
                 btnChoice2.setText("jebikkoch");
                 btnChoice3.setText("galsaeg");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 9)
             {
@@ -334,7 +316,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("ttatteushan");//ETO
                 btnChoice2.setText("chuwi");
                 btnChoice3.setText("haesbich");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 10)
             {
@@ -344,7 +325,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("juhwangsaeg");
                 btnChoice2.setText("jebikkoch");//ETO
                 btnChoice3.setText("ppalgan");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 11)
             {
@@ -354,7 +334,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("bug-amelika");//ETO
                 btnChoice2.setText("asia");
                 btnChoice3.setText("yuleob");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 12)
             {
@@ -364,7 +343,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("daehag");
                 btnChoice2.setText("yuchiwon");
                 btnChoice3.setText("junghaggyo");//ETO
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 13)
             {
@@ -374,7 +352,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("hoesaeg");//ETO
                 btnChoice2.setText("galsaeg");
                 btnChoice3.setText("ppalgan");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 14)
             {
@@ -384,7 +361,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("balam-i sen");//ETO
                 btnChoice2.setText("chuwi");
                 btnChoice3.setText("heulin");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 15)
             {
@@ -394,7 +370,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("nogsaeg");
                 btnChoice2.setText("geom-eun");
                 btnChoice3.setText("hwaiteu");//ETO
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 16)
             {
@@ -404,7 +379,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("ja");
                 btnChoice2.setText("puleun");//ETO
                 btnChoice3.setText("hoesaeg");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 17)
             {
@@ -414,7 +388,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("yuchiwon");
                 btnChoice2.setText("chodeunghaggyo");
                 btnChoice3.setText("godeunghaggyo");//ETO
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 18)
             {
@@ -424,7 +397,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("ja");//ETO
                 btnChoice2.setText("hoesaeg");
                 btnChoice3.setText("galsaeg");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 19)
             {
@@ -434,7 +406,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("haesbich");//ETO
                 btnChoice2.setText("nun");
                 btnChoice3.setText("heulin");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 20)
             {
@@ -444,7 +415,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("ppalgan");
                 btnChoice2.setText("galsaeg");//ETO
                 btnChoice3.setText("juhwangsaeg");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 21)
             {
@@ -454,7 +424,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("bug-amelika");
                 btnChoice2.setText("yuleob");
                 btnChoice3.setText("nam-amelika");//ETO
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 22)
             {
@@ -464,7 +433,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("junghaggyo");
                 btnChoice2.setText("daehag");
                 btnChoice3.setText("yuchiwon");//ETO
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 23)
             {
@@ -474,7 +442,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("bi");//ETO
                 btnChoice2.setText("nun");
                 btnChoice3.setText("heulin");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 24)
             {
@@ -484,7 +451,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("angae");//ETO
                 btnChoice2.setText("heulin");
                 btnChoice3.setText("chuwi");
-                fab2.setVisibility(View.GONE);
             }
             else if(secNumber == 25)
             {
@@ -494,7 +460,6 @@ public class Quiz2Activity extends AppCompatActivity {
                 btnChoice1.setText("bi");
                 btnChoice2.setText("nogsaeg");
                 btnChoice3.setText("chuwi");//ETO
-                fab2.setVisibility(View.VISIBLE);
             }
 
             return rootView;
